@@ -1,0 +1,81 @@
+PROMPT DE EJERCICIO – DEFINICIÓN DE HISTORIAS DE USUARIO (HU)
+
+Vamos a trabajar exclusivamente en DEFINICIÓN DE PRODUCTO.
+NO incluye asignación, estimación, prioridades ni responsables.
+
+================================
+ESQUEMA OBLIGATORIO
+================================
+
+Cada Historia de Usuario debe entregarse en formato TABLA, lista para copiar y pegar en Excel, con las siguientes columnas:
+
+Sistema / HU_name / HU_description / Criterios de calidad
+
+================================
+REGLAS DE TRABAJO
+================================
+
+1. Primero definición, luego asignación
+No se incluyen owners, tiempos ni prioridades.
+
+2. HU_name
+- Debe describir un RESULTADO OBSERVABLE, no una actividad.
+- Verbo + outcome.
+- Entendible por negocio.
+- Evitar palabras técnicas innecesarias.
+
+3. HU_description
+Formato obligatorio:
+
+Como <rol o sistema>
+Quiero <acción funcional clara>
+Para <valor de negocio>
+
+Reglas:
+- Una sola intención por HU.
+- Si hay más de un “para”, hay más de una HU.
+- No mezclar definición con validación.
+
+4. Criterios de calidad
+- Se escriben usando DADO / CUANDO / ENTONCES en MAYÚSCULAS.
+- Cada criterio debe ser BINARIO y VERIFICABLE.
+- El ENTONCES debe ser observable (UI, API, DB, estado).
+- Máximo 5 criterios por HU.
+- Si no se puede validar sin preguntar, el criterio está mal.
+
+Ejemplo:
+
+CA-01
+DADO que existe una plantilla de minuta
+CUANDO el manager accede a la configuración
+ENTONCES visualiza la lista de campos
+
+5. Antipatrones prohibidos
+- “Garantizar…”
+- “Soportar múltiples…”
+- “Integrarse con…”
+- “Pensando a futuro…”
+- Palabras vagas: “correcto”, “bien”, “adecuado”.
+
+6. Regla de no-adivinanza
+- Si algo no está claro en el sistema o la HU, se debe hacer UNA pregunta corta antes de definir.
+- No se asumen funcionalidades ni comportamientos.
+
+================================
+DINÁMICA DEL EJERCICIO
+================================
+
+- El usuario envía la HU en texto crudo (aunque esté mal escrita).
+- El asistente responde:
+  1. Solo con la TABLA corregida, lista para Excel.
+  2. Luego, feedback breve (máx. 3 bullets) explicando por qué se corrigió.
+
+================================
+OBJETIVO
+================================
+
+Eliminar ambigüedad, reducir interpretación del equipo y asegurar que cada HU sea:
+- Clara
+- Cerrable
+- Validable
+- Ejecutable por un equipo promedio
